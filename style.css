@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: linear-gradient(to right, white, rgb(190, 189, 189), grey);
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 10rem;
+  background-color: #444343;
+  .logo {
+    font-size: 32px;
+    color: white;
+    font-family: "Roboto Mono", serif;
+  }
+  .search {
+    position: relative;
+    .input {
+      background-color: #fff;
+      border: 0;
+      font-size: 18px;
+      padding: 15px;
+      height: 20px;
+      width: 20px;
+      transition: width 0.2s ease;
+      border-radius: 50%;
+    }
+    .btn {
+      background-color: #fff;
+      cursor: pointer;
+      border: 0;
+      font-size: 18px;
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      height: 20px;
+      width: 20px;
+      transition: transform 0.3s ease;
+      border-radius: 50%;
+    }
+  }
+}
+.btn:focus {
+  outline: none;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.search.active .input {
+  width: 250px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.search.active .btn {
+  position: absolute;
+  top: 5px;
+  transform: translateX(215px);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.container {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  
+}
+.countries {
+  background-color: rgb(190, 188, 188);
+  padding: 50px;
+  margin: 20px;
+  border: 1px solid black;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  img {
+    height: 100%;
+    width: 80%;
+    border-radius: 10px;
+  }
+  .img-container {
+    height: 200px;
+    width: 400px;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    text-align: center;
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    h2 {
+      margin-top: 10px;
+      margin-bottom: 5px;
+      width: 80%;
+      margin: 10px auto;
+    }
+  }
+}
+.countries:hover {
+  transform: translateY(-10px);
+}
+.hide {
+  display: none;
+}
